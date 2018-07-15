@@ -17,7 +17,6 @@ fn main() {
 		get "**" => |_req, _res| {
 			println!("### REQUEST: [/] ###");
 			let response = format!("{:?}: [/] Hello world!\n", std::thread::current().id());
-			// let _json = _req.json_as();
 			// let value1 = _req.param("key1");
 			// println!("[key1]: {:?}", value1);
 			response

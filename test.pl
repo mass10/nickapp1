@@ -10,10 +10,10 @@ use JSON;
 
 sub _get_root {
 
-	my $url = "http://localhost:6767/";
+	my $url = "http://localhost:6767?key1=value-1";
 	chomp($url);
 	my $ua = LWP::UserAgent->new();
-	my $response = $ua->get($url, Content_Type => 'text/plain; charset=UTF-8');
+	my $response = $ua->get($url);
 	if(!$response->is_success) {
 		print($response->status_line, "\n");
 		return;
